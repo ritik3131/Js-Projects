@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../planet-2120004_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.word{
+    width: 103px;
+    /* height: 100px; */
+    border: 2px solid #51c8f6;
+    margin: 0px 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px -1px 8px #51c8f6;
+    padding: 29px 0px;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 46px;
+    color: pink;
+    transition: all 0.07s;
+}
+.playing{
+    transform: scale(1.05);
+    border: yellow;
+    box-shadow: 0px 0px 5px 6px yellow;
+}

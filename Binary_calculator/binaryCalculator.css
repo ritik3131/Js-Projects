@@ -1,0 +1,49 @@
+
+/*body has a width of 33%.
+res has a background-color of lightgray, a border that is solid, a height of 48px, and a font-size of 20px.
+btn0 and btn1 have a background-color of lightgreen and a color of brown.
+btnClr and btnEql have a background-color of darkgreen and a color of white.
+btnSum, btnSub, btnMul, and btnDiv have a background-color of black, a color of red.
+All the buttons in btns have a width of 25%, a height of 36px, a font-size of 18px, margin of 0px, and float value left.
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 33%;
+}
+#res{
+    background-color: lightgray;
+    border: solid;
+    height: 48px;
+    font-size: 20px;
+}
+#btn0,#btn1{
+    background-color: lightgreen;
+    color: brown;
+    float: left;
+    font-size: 18px;
+    width: 25%;
+    height: 36px;
+}
+#btnClr,#btnEql{
+    float: left;
+    background-color: darkgreen;
+    color: white;
+    font-size: 18px;
+    width: 25%;
+    height: 36px;
+}
+#btnSum, #btnSub, #btnMul,#btnDiv{
+    background-color: black;
+    color:red;
+    font-size: 18px;
+    float: left;
+    width: 25%;
+    height: 36px;
+}
+#btns{
+    margin: 0px;
+}
+

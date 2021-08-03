@@ -1,0 +1,136 @@
+{
+"status": "ok",
+"totalResults": 10,
+"articles": [
+{
+"source": {
+"id": "bbc-news",
+"name": "BBC News"
+},
+"author": "BBC News",
+"title": "French police station stabbing: Terror inquiry into Rambouillet knife attack",
+"description": "Anti-terror prosecutors are leading the inquiry after the unarmed employee was stabbed in the neck.",
+"url": "http://www.bbc.co.uk/news/world-europe-56862436",
+"urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/5089/production/_118171602_rambouil.jpg",
+"publishedAt": "2021-04-24T02:52:25.0355234Z",
+"content": "image captionThe Yvelines area west of Paris has been targeted by militant Islamists in the past\r\nA female police employee has been killed in a knife attack at a police station south-west of Paris.\r\n… [+4767 chars]"
+},
+{
+"source": {
+"id": "bbc-news",
+"name": "BBC News"
+},
+"author": "BBC News",
+"title": "Covid-19: Israel records no daily deaths for the first time in 10 months",
+"description": "The drop in deaths is seen as a promising sign as Israel vaccinates more than 50% of its population.",
+"url": "http://www.bbc.co.uk/news/world-middle-east-56868383",
+"urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1092F/production/_118178876_mediaitem118178875.jpg",
+"publishedAt": "2021-04-24T02:52:23.2703385Z",
+"content": "image captionIsrael has the highest vaccination rate in the world\r\nIsrael has recorded no new daily Covid-19 deaths for the first time in 10 months, as the country pushes ahead with its speedy vaccin… [+2585 chars]"
+},
+{
+"source": {
+"id": "bbc-news",
+"name": "BBC News"
+},
+"author": "BBC News",
+"title": "Covid: 'Smell training' recommended for lost sense of smell",
+"description": "About one in five people say they still cannot smell properly eight weeks after a Covid infection.",
+"url": "http://www.bbc.co.uk/news/health-56865129",
+"urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/402B/production/_118172461_gettyimages-545378388.jpg",
+"publishedAt": "2021-04-24T00:22:18.0445864Z",
+"content": "image copyrightGetty Images\r\nimage captionThe recommendation is to sniff familiar items like garlic, oranges and mint twice a day for several months\r\nResearchers are calling for people struggling to … [+2370 chars]"
+},
+{
+"source": {
+"id": "bbc-news",
+"name": "BBC News"
+},
+"author": "BBC News",
+"title": "Inside the Delhi hospital at breaking point",
+"description": "Covid-19 patients who get a hospital bed are being described as the lucky ones in India's deadly second wave.",
+"url": "http://www.bbc.co.uk/news/world-asia-india-56864789",
+"urlToImage": "https://ichef.bbci.co.uk/images/ic/400xn/p09fmgx5.jpg",
+"publishedAt": "2021-04-23T23:37:20.8674766Z",
+"content": "India's deadly second wave is continuing to set world records for its daily total of coronavirus cases.\r\nIn the past 24 hours, more than 330,000 were recorded and thousands more have died. The countr… [+227 chars]"
+},
+{
+"source": {
+"id": "bbc-news",
+"name": "BBC News"
+},
+"author": "BBC News",
+"title": "Myanmar: Military chief set to make first foreign trip since coup",
+"description": "The Jakarta regional summit will be Min Aung Hlaing's first trip since the army took power in a coup.",
+"url": "http://www.bbc.co.uk/news/world-asia-56855166",
+"urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/FCEA/production/_118164746_hi066449786.jpg",
+"publishedAt": "2021-04-23T23:22:22.516002Z",
+"content": "image captionMin Aung Hlaing has medals galore, but little public support\r\nThe head of the Myanmar military is set to meet international leaders, in what will be his first known foreign trip since th… [+3416 chars]"
+},
+{
+"source": {
+"id": "bbc-news",
+"name": "BBC News"
+},
+"author": "BBC News",
+"title": "US health panel urges restarting Johnson & Johnson vaccines",
+"description": "The officials said it was important for women be told about that potential risks of the vaccine.",
+"url": "http://www.bbc.co.uk/news/world-us-canada-56865562",
+"urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/69BB/production/_118176072_gettyimages-1306577268.jpg",
+"publishedAt": "2021-04-23T23:07:25.9609419Z",
+"content": "image copyrightGetty Images\r\nUS health officials have recommended lifting a pause on the Johnson &amp; Johnson (J&amp;J) Covid-19 jab, but adding a label about the potential for extremely rare blood … [+1821 chars]"
+},
+{
+"source": {
+"id": "bbc-news",
+"name": "BBC News"
+},
+"author": "BBC News",
+"title": "The real life nomads of Nomadland",
+"description": "Meet the Americans whose lives on the road inspired the Oscar nominated film.",
+"url": "http://www.bbc.co.uk/news/world-us-canada-56859334",
+"urlToImage": "https://ichef.bbci.co.uk/images/ic/400xn/p09fmlyy.jpg",
+"publishedAt": "2021-04-23T22:52:23.6542741Z",
+"content": "In the American west, a community of nomads travels the country living out of their cars and vans. These individuals, and their unique lifestyle, served as inspiration for the six-time Oscar nominate… [+16 chars]"
+},
+{
+"source": {
+"id": "bbc-news",
+"name": "BBC News"
+},
+"author": "BBC News",
+"title": "Caitlyn Jenner announces bid for California governor",
+"description": "The former Olympic athlete and tv star announced the move on Twitter on Friday.",
+"url": "http://www.bbc.co.uk/news/world-us-canada-56864649",
+"urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/176C1/production/_118173959_gettyimages-1199767410.jpg",
+"publishedAt": "2021-04-23T14:52:19.384932Z",
+"content": "image copyrightGetty Images\r\nimage captionThe former Olympic athlete announced her bid on Friday\r\nCaitlyn Jenner has announced she has filed the paperwork to run for California governor. \r\nThe former… [+846 chars]"
+},
+{
+"source": {
+"id": "bbc-news",
+"name": "BBC News"
+},
+"author": "BBC News",
+"title": "Sarah Voss: German gymnast's outfit takes on sexualisation in sport",
+"description": "Sarah Voss defies convention by ditching the leotard for a full-body suit at the European championship.",
+"url": "http://www.bbc.co.uk/news/world-europe-56858863",
+"urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1529E/production/_118168668_voss.jpg",
+"publishedAt": "2021-04-23T11:37:15.6117786Z",
+"content": "image captionSarah Voss said she hoped other gymnasts would follow the team's example\r\nShe did not break any rules, but Sarah Voss's full-body suit at the European Artistic Gymnastics Championships i… [+2536 chars]"
+},
+{
+"source": {
+"id": "bbc-news",
+"name": "BBC News"
+},
+"author": "BBC News",
+"title": "India Covid crisis: Hospitals buckle under record surge",
+"description": "Families of Covid patients are pleading for hospital care as emergency rooms and wards overflow.",
+"url": "http://www.bbc.co.uk/news/world-asia-56858403",
+"urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/6ED8/production/_118167382_gettyimages-1232471952.jpg",
+"publishedAt": "2021-04-23T09:37:20.4505676Z",
+"content": "media captionScenes outside a hospital in Delhi, where people are dying without getting the treatment they need\r\nIndia's healthcare system is buckling as a record surge in Covid-19 cases puts pressur… [+3139 chars]"
+}
+]
+}

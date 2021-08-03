@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*body{
+    overflow: hidden;
+}*/
+.container{
+    width: 100vw;
+    min-height: 120vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+.panel1
+{
+    background-image: url('../alain-bonnardeaux-tLxGw_ITs7k-unsplash.jpg');
+    /*width: 20%;*/
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+.panel2
+{
+    background-image: url('../alfonso-castro-HaGwCk2AD84-unsplash.jpg');
+    /*width: 20%;*/
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+.panel3
+{
+    background-image: url('../daniel-macura-E6xfioiJmms-unsplash.jpg');   
+   /* width: 20%;*/
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+.panel4
+{
+    background-image: url('../justin-w-cvLJgYak-n4-unsplash.jpg');
+    /*width: 20%;*/
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+.panel5
+{
+    background-image: url('../mitchell-luo-1uqdxXHRDZU-unsplash.jpg');
+    /*width: 20%;*/
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+.panel >*{
+    width: 100%;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+    transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex-grow 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    background 0.2s ;
+}
+.panel >*:first-child{
+    transform: translateY(-100%);
+}
+.panel >*:last-child{
+    transform: translateY(100%);
+}
+.panel.open-active >*:first-child{
+    transform: translateY(0);
+}
+.panel.open-active >*:last-child{
+    transform: translateY(0);
+}
+.panel.open{
+    flex: 5;
+    font-size: 70px;
+}
+/*p {
+    padding: 21px 0px;
+    text-align: center;
+}*/

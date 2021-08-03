@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+body{
+    background-image: url('https://moovly.com/wp-content/uploads/2020/03/MoovlyHeroBanner3.png');
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.player{
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    margin-top: 10rem;
+}
+.container1{
+    background-color: rgba(0, 0, 0, 0.425);
+    margin-bottom: 0.4rem;
+}
+#fs{
+    position: relative;
+    top: 1px;
+    width: 3%;
+}
+.pause,#fs{
+    position: relative;
+    font-size: 1.2rem;
+}
+
+#volume{
+    position: relative;
+    top: 4px;
+    width: 45%;
+}
+#speed{
+    position: relative;
+    top: 4px;
+    width: 31.4%;
+}
+#skip1,#skip2{
+    position: relative;
+    width: 10%;
+    padding:0.3rem;
+}
+.length{
+    position: relative;
+    width: 87%;
+}

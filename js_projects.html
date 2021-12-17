@@ -1,257 +1,492 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicons -->
+    <link href="logo.png" rel="icon" />
+    <link href="logo.png" rel="apple-touch-icon" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
     <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
     <title>JavaScript Projects</title>
     <style>
-        .b-example-divider {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
-}
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%),
+          inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+      }
     </style>
   </head>
   <body>
     <h1 class="display-4 fw-bold text-center my-10">JS Projects</h1>
-     <img class="d-block mx-auto mb-4" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PERANDw8TDxARDg0VDw4PEw8QDw0RFhIWFhYSFRMYHiggGB4nGxUVLTUhKiorLi46GB8zODYvQygtLisBCgoKDg0OGxAQGyslICU1NS0tLi8zKy0tLTAtNTArLy0tLSsxLS0tLS8tLS0rKy0tNS0tLS0tLS0rLS0rLS0uLf/AABEIAKgBKwMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABggFBwIDBAH/xABLEAACAQIBAgwTBwQCAwEAAAAAAQIDBBEFIQYHEhMXMTJBVGFx0RQVIjRRUlNVcnN0kZOUo7Gy0tMIQoGSobPDIyQ1tGLBM0OiFv/EABsBAQACAwEBAAAAAAAAAAAAAAAEBQEDBgIH/8QAOxEAAgEBAgkKBgEDBQAAAAAAAAECAwQRBRMhMUFRcbHREhUyM1NhgZKhwQYUNEKR8HIiouEWI0NSYv/aAAwDAQACEQMRAD8A2QAD5cWwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGdG+jGlkqnTlKm61Wq5KlST1CajhqpSng8EsVvPbINs1PvcvWH9M46fe7sPF3XxUzx6V+lzbZYt61xWr1aUqdxrajSVNprURli9UuM63BeCrLWssalSN7d+lrS1ou1EOrWnGbSZ7tmp97l6w/pjZqfe5esP6ZJNgmw4Zc+ajzDYJsOGXPmo8xYcy2Hs/WXE14+prI3s1PvcvWH9MbNT73L1h/TJJsE2HDLnzUeYbBNhwy581HmHMth7P1lxGPqayN7NT73L1h/TGzU+9y9Yf0ySbBNhwy581HmGwRYcMufNR5hzLYez9ZcRj6msjezU+9y9Yf0xs1PvcvWH9MkmwRYcMufNR5hsE2HDLnzUeYcy2Hs/WXEY+prI9HTnk8cMmp4LF/3DzL0Zw2an3uXrD+mSTYJseG3Pmo8w2CbDhlz5qPMOZbD2frLiMfU1kb2an3uXrD+mNmp97l6w/pkk2CLDhlz5qPMNgmw4Zc+ajzDmWw9n6y4jH1NZG9mp97l6w/pjZqfe5esP6ZJNgmw4Zc+ajzDYJsOGXPmo8w5lsPZ+suIx9TWRxadUu9y9Yf0z2bLVTvfH1mX0jMw0ibFNNXlzm4qPync9JO04dc/lt/lHMth7P1lxMY+prI69N2fe+PrL+kNl+fe+PrL+kSHYSs+HXP5bf5ThV0krNRk+jbnNFvc0N5eCZ5msPZ+suIx9TWY/IemrCvXp0K9rrEak4wjVjV11RnJ4R1UXCObFrPvGxysGS5Y1rZ9mvb/ALkS0DOdw3YqNmnDEq5NO9Xt5rte0k2epKV958ABRkgAAAAAAAAAAAAAAAAAAAAA09p97uw8XdfFTJP9nXrG78t/igRjT73dh4u6+KmSf7OvWN35b/FA77A30NPx3srq/WM2wcK0motrbSzeY5nXc7mXI/cT63Vyu1M1xzoxfRlTtv0Q6Mqdt+iOkHztW203dZPzS4lni4al+Dv6Mqdt+iHRdTtv0R0HiyzUlC3uZxbjKNrcuMlmcZKnJpp8p6VstLaWMn5pcTDhDUvwZToyp236IdGVO2/RFX//ANtlbvjc+lmSrS00T5QucpW9CveVqtKUbjVU5zlKMsKM2sVypeYuq2DsIUqcqkq7uim+lPQryPGrTbu5O43r0ZU7b9EfejKnbfojoOq5rwpQlVqSUIQi5TnJ4RhFLFtspPnLS/8Akn5pcSTi4akezoyp236IK7qdt+iNJaK9NmtOUqWTkqNJNroipFSrT44xeaC5U3ybRArnRHf1W5VL24m29+tVwXIscEXlDBmEakeVOrKPc5Sb9GRpVaSzRv8AwWp6Lqdt+iHRlTtv0RVa10R39JqVO9uINPerVcHyrHBk/wBCGmxXjONHKK12m8F0TTilWp/8pQWaa5Eny7Qr4MwlTjyoVZS7lKSf4EatN543fg3bG6qdt+iPVZVpSb1Txww7BjLevCpGNSnJThOMZQnFpxnFrFNPfWBkMm7cvw95owZaKztcISnJq9529T0PvPdWMVBtI9xwuNxPwJe5nM4XG4n4EvczsiCVByO/61t4+2/ciWjZVrIz/r23j7f9yJaVnK/EnTpbH7Eyy/d+6wADmCUAAAAAAAAAAAAAAAAAAAAAae0+93YeLuvipkn+zr1jd+W/xQIxp97uw8XdfFTJP9nXrG78t/igd9gb6Gn472V1frGbYOu53MuR+47DrudzLkfuJ1bq5bHuNcc6MKgED5ksxbA8GXutbvyS6/ake88GXutbvyS6/ake4dJbUYeYqoTPSj/y1t4F1/r1CGEz0o/8tbeBdf69Q+iYQ+kq/wAZbmVlLpraWHNS6eOXZR1nJsJYKcVWr4feWqapx5MYyeHFE20aA05semk8droe31PJqefE5HAdKNS2K/Qm/HN73k20O6BBSU6GtA1/lGGvUKUYUsWlWrS1FOTW2o5m5cqWG2iKlo9CE6UrCydHDW+g7ZRSz4YQSknxqSePHidHhe31LJTi6aV8nde9H+SLRpqbymh9EegPKGT467WpKpS+9WoS1yEfCzJxXG1gYKypt7SblJqMYpNyk3vJLbbe8Wpq0ozjKE4qUZRcZRkk4yi1g01vpowmhvQXY5Ocp0KbdRuWFWq9XOnFvNCD+6ks3Ze+2V1m+IP9t46N8lmuyJ77rvHuRslZsuR5DGaVuSr+1tpU7xKFOUlK3oSeNejjjq1Leim8HqdtNvHDHA2Bk3bl+HvPEezJm3L8PeQbDXlXwjCpJJNt5v4s2TjyaTRkDhcbifgS9zOZ13G4n4EvcztSCU+yM/69t5Rb/HEtOyq2RX/cW3lFv+5EtSzlPiXp0tj9iZZfu8PcAA5klAAAAAAAAAAAAAAAAAAAAAGntPvd2Hi7r4qZJ/s69Y3flv8AFAjGn3u7Dxd18VMk/wBnXrG78t/igd9gb6Gn472V1frGbYOu53MuR+47DrudzLkfuJ1bq5bHuNcc6MKgED5ksxbA8GXutbvyS6/ake88GXutbvyS6/ake4dJbUYeYqoTPSj/AMtbeBdf69QhhM9KP/LW3gXX+vUPomEPpKv8ZbmVlLpraWHNQ6eWRJaq3yjFNx1Gs1WvuNNypt8uMl+C7Jt48+UbGlc0qlvWgqlKpFxnB76fHvPsPbWBwlhtTs1eNW6+7Psefiiwqw5cbippKdCWja8ya9TSkqlByxlbVcXTb33FrPB8azdlMyOjTS7usnuVakpXNosXrsVjUox7FWK7C+8s3JtEGO9jKz2yjkulF/u1MrmpQeplgtDemfk+7wjWk7OrmxVbPRb4qyzfm1JOIyTSkmmmsU1nTXZT3yqFJYLDzmf0M6L7zJslrFTVUsert6mMqMuzgvuPjWHHiUlp+H43N2d3dzzfnj+TfG0v7iyJ7Mmbcvw95FNCGiq3ypR12j1FSGCrUJNOdGT2vCi8HhLf4niiVZM25fgVWDacqdvhCauabv8AKzfVadNtGROuvuJ+BP3M5nCvuJ+BP3M7kryneRX/AHFt5RQ/cRatlUsi9c2/lFD40WsZyvxL06WyW9Euy6f3WAAcwSwAAAAAAAAAAAAAAAAAAAADT2n3u7Dxd18VMk/2desbvy3+KBGNPvd2Hi7r4qZJ/s69Y3flv8UDvsDfQ0/Heyur9YzbB13O5lyP3HYddzuZcj9xOrdXLY9xrjnRhUD4YPKOi2wt7ilZVK8dfq1FDUR6rWm9rXGs0MXgs+fOt7OfNaVOdTJBNu6/IWkmllZnTwZe61u/JLr9qR7zG6JaqhZ3s5ZlGzu2/RSFPpLahLMVXJnpR/5a28C6/wBeoQwmulDBvKtu1vU7pviWsTX/AGj6JhD6Sr/GW5lbT6aLCgGF0S6KLPJ0NXc1cJNNwow6qvV8GHY43guM+eQhKpLkwV7ehFm2kr2ZoimiHS+ydfNzlS1is8+vW2EG32ZQ3MuXDHjO/QVovoZVp1JQjrVSnNqdCUlKSg31FRNbaa8zTXYbkqN6x9kqtXuMl+7H6o8f0zjfnRoTRRpcX1kpVYYXdCKblUpJ65BdmVLFvDjTeG/gQhstkVz0zLOlQyndU6KUYN05uEdqE504ykkt7O28OM6rBGFKlqk6VXOlff8AhZVm0oiVqSjlR4dCGXZZPu6N1F9QpKNePb0ZNatf9rjii0+S3nlhnWCwfZzFO2y2mgqblaW0pbqVlZuXK6MWzbbKcVb7PU0vlJ+CbR5pt4uSM+cK+4n4E/czmcK+4n4E/cy4NJTnIvXNv5RQ+NFrGVTyL1zb+UUPjRaxnKfEvTpbH7Eyyfd4e4ABzJKAAAAAAAAAAAAAAAAAAAAANPafe7sPF3XxUyT/AGdesbvy3+KBGNPvd2Hi7r4qZJ/s69Y3flv8UDvsDfQ0/Heyur9YzbB13O4lyP3HYddzuZcj9xOrdXLY9xrjnRpLTb0U5RtKkLWj/b0KtLGNxTb12tvTgpf+vBtbWfOnjnwNOSlji28W3nbztstBomyBQyjbyta6zN406iw1dGa2px5t80Dop0HXuTpPXqblSx6i5ppyoyW9i/uPieH47ZSYBtdB0VRSUZ6f/Xf3vRdo0G+0Qkpcp5iW6GdNypRpxo3tB3GoSUbiElGq0tpTTWEn/wAsVx47Z4tGumbO/oys7ei7elPDXZynqqtWKaepzJKKxWfbx8+Ouj4WEcF2SNXGqGXPpuvz5s2c1urNq68G09IzJUpV7i+a6inS1qD3nUm1J4ckY/8A2iI6FtB15lKcVRpuNLHq7maaowW/g/vPiX44bZYLQ9kWjYW9O0oLqIJ4ye6qTe6qS42/NmW8QMOW6EKLoRd8pZ+5Z8up/ug2Wem3LlaDty3RuKlvWha1NZuHTlrNRqLUZ7aTxTWfaxwzY4lYMpOtrtTolzddTkqrqturq08GpN58cxawhWj3S/o5RxuKLVC8UUnN/wDjuElmVTDf/wCSz72fBYVGBsIwss3GosktOlbe7dnN1ek5ZUaLyRlOvaVY3FtUdKrHalHfT2008zXE8xtHJenJhFRu7PGSSxqW80lJ+LntfmZrjLOhy7sZON1QnTz4RqYaqlPwai6l+cxbZ1VeyWa2JSklLU0/dESM5QeQ21lfTkxi42lo4zaeFS4mmoPs63Hb85qq+u6lapOtVm6lSpKUpzltyk3nZ0NmQyPkS6vZ63a0J1pY59Suohxym+piuVmbPZLPZItwSWtt+73CU5TeU45EybO8uKNpT3dapGKfar70nxJYv8C2WRqah1Ec0YwhGK7CSwRAdL/QLDJsXWqyVW7nHCU47ijHfhDHb45b/v2Dkvbn+HvKSVvjasJUo0+jFu562073syXL8m9U3GlJvOZE66+4n4E/czmcK+4n4E/czpiKU5yL1zb+UUPjRaxlU8i9c2/lFD40WsZynxL06Wx+xMsn3eHuAAcySgAAAAAAAAAAAAAAAAAAAADT2n3u7Dxd18VMlH2dF/Y3flv8UCM6fcXqrCWGbU3Sx3scaeY1ZRuqsFhCpOCbzqMpRTf4HfYG+hp+O9ldX6xl0NS+wfJ08U01mawZTPpjcd3q+knzjpjcd3q+knzlm0mrmai4vQEO1fnkHYU9rUbe2sZZynXTG47vV9JPnHTG47vV9JPnInN9k7KHljwPeNnrZay60C5KqtyqZOoSk9uSpqLb7LccMRbaBMk0mpRydb4p5m6ak0+ynLHAqn0xuO71fST5x0xuO71fST5zb8tRu5PJV2q5XHm9lxVk+msyhgltJarBDoCHavzyKddMbju9X0k+cdMbju9X0k+c1c32TsoeWPA9YyetlxugIdq/PIdAQ7V+eRTnpjcd3q+knzn1ZRuO71fST5xzfZeyh5VwGMnrZcOWT6bTi4Yp7aeLT5UYa40B5JqNuWTrfFvFtU4wbfZbjgVWeUa/d6vpJ858eUa/d6vpJ857hY7PB3xpxWxJbjDnJ52Woo6X+SIZ1k23fhU1P4sTNUsmUoJQhSUIrajHGMVyJFPOmNx3er6SfOOmNx3er6SfOJ2OzzyyhF7UnvCnJZmXG6Ah2r88jnStowxcYtY8rKbdMbju9X0k+cdMbju9X0k+cU7HZ6clKFOKetJJ+gc5PI2XN1L7B13Ceonm+5P3Mpt0xuO71fST5x0xuO71fST5yQeTnkXrm38oofGi1jKq5Ci3dWySxbubdJLfeuRzFqmcp8S9OlsfsTLJ93h7gAHMkoAAAAAAAAAAAAAAAAAAAAA8GWMkW15T1i6oxrU8cVGWOMZbWqjJZ4vO86ZH9jPI3A/bXXzkvBvp2mtTXJhOSXc2tzMOEXnRENjPI3A/bXXzjYzyNwP21185Lwe/nrT2s/NLiYxcdRENjPI3A/bXXzjYzyNwP21185LwPnrT2s/NLiMXHURDYzyNwP211842M8jcD9tdfOS8D5609rPzS4jFx1EAyrpb5LWo1q21O61X9W4eO1hty5Tw7HFh3D2lb5jaNOy1xarsZj70qO6wW5SsdOU3e2r73lzt3elxXVrlNpGrdjiw7h7St8w2OLDuHtK3zG0ulQ6VFhcazV9LS6sMVjQxWqjitcrZ1jn+8ZzYzyNwP21185NelR0M5n4irVaTpOnJq/lZm1mu1EuyxTvvREdjPI3A/bXXzjYzyNwP21185Lwc389ae1n5pcSVi46iIbGeRuB+2uvnGxnkbgftrr5yXgfPWntZ+aXEYuOoiGxnkbgftrr5xsZ5G4H7a6+cl4Hz1p7WfmlxGLjqI/kfQTk2zqKvb2sY1Y7mcpVajhxx1cng+MkABpqVZ1Hypybfe295lJLMAAazIAAAAAAAAAAAAAAAAABxxPjZzGBm8HS5M4ubO/A+YGbwed1JHB1JHrwGpM8pGLjxOrM+OrU7B7tShqUZ5aFxjJV629E+0a1WT6tqmuzqJzfmXOZLUoalHuFWMXe4p/n2uZhxv0mGvKFaUm6dxJRwWZQnH9MDo6DuuET/ACy5iQalHLAuYfENaEVCFOKSyJf1cTQ7NFu9tke6Duu71PyyPnQd1wif5ZcxIhgev9SWj/pH+7iPlY62R1W1zwmf5Z8xkerjBYVdVJJJrW6mL49UuY9+pQ1KI9pwy7TFRq04u7N0snqeoUFF3pv0MVG4r78TujVqb6PfqUNSip5a1G648SqzOSqSPXqUNShy0LjzKpI5qbO7AYGOULjrUmckzngMDF6MnzE5AHkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//2Q==" alt="" width="72" height="57">
-     <div class="b-example-divider"></div>
-     
-     
+    <img
+      class="d-block mx-auto mb-4"
+      src="data:image/jpeg;base64,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"
+      alt=""
+      width="72"
+      height="57"
+    />
+    <div class="b-example-divider"></div>
 
-      <div class="px-4 pt-5 my-5 text-center border-bottom">
-  <h1 class="display-4 fw-bold">JavaScript Drum</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-      <!--<button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Live preview</button>-->
-      <a href="../js_drum/javascrit_drum_tool.html" class="btn btn-primary  btn-lg px-4 me-sm-3" target="_blank">
-        Live Preview
-      </a>
-      <button type="button" class="btn btn-outline-secondary btn-lg px-4">View Code</button>
-    </div>
-  </div>
-  <div class="overflow-hidden" style="max-height: 30vh;">
-    <div class="container px-5">
-      <img src="https://cdn.mos.cms.futurecdn.net/aGzXyuwtqUYxjCtztmhRFn-1200-80.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-    </div>
-  </div>
-</div>
-<div class="b-example-divider"></div>
-<div class="container my-5">
-    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-        <h1 class="display-4 fw-bold lh-1">Customize video player</h1>
-        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-          <a href="../customize_video_player/video_player_customization.html" class="btn btn-primary  btn-lg px-4 me-sm-3" target="_blank">
-            Live Preview
-          </a>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">View Code</button>
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="/Speech_Synthesis/image.jpg"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
         </div>
-      </div>
-      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-          <img class="rounded-lg-3" src="https://images.unsplash.com/photo-1574717024757-c1ec4d86ae82?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjIyMzcxNTE0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600" alt="" width="720">
-      </div>
-    </div>
-  </div>
-<div class="b-example-divider"></div>
-<div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="https://i.ytimg.com/vi/8KrPMXOZAQY/maxresdefault.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Notes Making Website</h1>
-        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a href="../notes_websites/Notes_taking_website.html" class="btn btn-primary  btn-lg px-4 me-sm-3" target="_blank">
-            Live Preview
-          </a>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">View Code</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="b-example-divider"></div>
-  <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="https://i.ytimg.com/vi/WY4rvU4ImgE/maxresdefault.jpg" alt="" width="72" height="57">
-    <h1 class="display-5 fw-bold">Form Validation</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <!--<button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">View Code</button>-->
-        <a href="../Form_val/form_validation_project.html" class="btn btn-primary  btn-lg px-4 me-sm-3" target="_blank">
-          Live Preview
-        </a>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">View Code</button>
-      </div>
-    </div>
-  </div>
-  <div class="b-example-divider"></div>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-  <div  class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <div class="col">
-      <div class="card shadow-sm">
-        
-        <img src="https://images.ctfassets.net/vne94x762vsn/4KytbRjKWAzY08gjUxycdo/4cc4082b86528e73ef940a901e9e4c12/iotvoice_wide.png"  class="bd-placeholder-img card-img-top" alt="" width="100%" height="225" srcset="">
-
-        <div class="card-body">
-          <h3 class="text-center">Voice Recognition</h3>
-          <p class="card-text">This Need to be open in local host otherwise it will not run properly</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <!--<button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Live preview</button>-->
-              <a href="/voice_recong/index.html" class="btn btn-primary  btn-lg  me-sm-3" target="_blank">
-                Live Preview
-              </a>
-              <button type="button" class="btn btn-outline-secondary btn-lg">View Code</button>
-            </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">Speech Synthesis</h1>
+          <p class="lead">
+            Quickly design and customize responsive mobile-first sites with
+            Bootstrap, the world’s most popular front-end open source toolkit,
+            featuring Sass variables and mixins, responsive grid system,
+            extensive prebuilt components, and powerful JavaScript plugins.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a
+              href="Speech_Synthesis/speech_synthesis.html"
+              class="btn btn-primary btn-lg px-4 me-sm-3"
+              target="_blank"
+            >
+              Live Preview
+            </a>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+              View Code
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="https://imagingedge.sony.net/img/IE_webcam_start.png"  class="bd-placeholder-img card-img-top" alt="" width="100%" height="225" srcset="">
+    <div class="b-example-divider"></div>
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+      <h1 class="display-4 fw-bold">JavaScript Drum</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Quickly design and customize responsive mobile-first sites with
+          Bootstrap, the world’s most popular front-end open source toolkit,
+          featuring Sass variables and mixins, responsive grid system, extensive
+          prebuilt components, and powerful JavaScript plugins.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <!--<button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Live preview</button>-->
+          <a
+            href="../js_drum/javascrit_drum_tool.html"
+            class="btn btn-primary btn-lg px-4 me-sm-3"
+            target="_blank"
+          >
+            Live Preview
+          </a>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+            View Code
+          </button>
+        </div>
+      </div>
+      <div class="overflow-hidden" style="max-height: 30vh">
+        <div class="container px-5">
+          <img
+            src="https://cdn.mos.cms.futurecdn.net/aGzXyuwtqUYxjCtztmhRFn-1200-80.jpg"
+            class="img-fluid border rounded-3 shadow-lg mb-4"
+            alt="Example image"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="container my-5">
+      <div
+        class="
+          row
+          p-4
+          pb-0
+          pe-lg-0
+          pt-lg-5
+          align-items-center
+          rounded-3
+          border
+          shadow-lg
+        "
+      >
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1">Customize video player</h1>
+          <p class="lead">
+            Quickly design and customize responsive mobile-first sites with
+            Bootstrap, the world’s most popular front-end open source toolkit,
+            featuring Sass variables and mixins, responsive grid system,
+            extensive prebuilt components, and powerful JavaScript plugins.
+          </p>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
+          >
+            <a
+              href="../customize_video_player/video_player_customization.html"
+              class="btn btn-primary btn-lg px-4 me-sm-3"
+              target="_blank"
+            >
+              Live Preview
+            </a>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+              View Code
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img
+            class="rounded-lg-3"
+            src="https://images.unsplash.com/photo-1574717024757-c1ec4d86ae82?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjIyMzcxNTE0&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600"
+            alt=""
+            width="720"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="https://i.ytimg.com/vi/8KrPMXOZAQY/maxresdefault.jpg"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">Notes Making Website</h1>
+          <p class="lead">
+            Quickly design and customize responsive mobile-first sites with
+            Bootstrap, the world’s most popular front-end open source toolkit,
+            featuring Sass variables and mixins, responsive grid system,
+            extensive prebuilt components, and powerful JavaScript plugins.
+          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a
+              href="/Notes_websites/Notes_taking_website.html"
+              class="btn btn-primary btn-lg px-4 me-sm-3"
+              target="_blank"
+            >
+              Live Preview
+            </a>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+              View Code
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+    <div class="px-4 py-5 my-5 text-center">
+      <img
+        class="d-block mx-auto mb-4"
+        src="https://i.ytimg.com/vi/WY4rvU4ImgE/maxresdefault.jpg"
+        alt=""
+        width="72"
+        height="57"
+      />
+      <h1 class="display-5 fw-bold">Form Validation</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Quickly design and customize responsive mobile-first sites with
+          Bootstrap, the world’s most popular front-end open source toolkit,
+          featuring Sass variables and mixins, responsive grid system, extensive
+          prebuilt components, and powerful JavaScript plugins.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <!--<button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">View Code</button>-->
+          <a
+            href="../Form_val/form_validation_project.html"
+            class="btn btn-primary btn-lg px-4 me-sm-3"
+            target="_blank"
+          >
+            Live Preview
+          </a>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+            View Code
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
 
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="https://images.ctfassets.net/vne94x762vsn/4KytbRjKWAzY08gjUxycdo/4cc4082b86528e73ef940a901e9e4c12/iotvoice_wide.png"
+                class="bd-placeholder-img card-img-top"
+                alt=""
+                width="100%"
+                height="225"
+                srcset=""
+              />
 
-        <div class="card-body">
-          <h3 class="text-center">Virtual Webcam</h3>
+              <div class="card-body">
+                <h3 class="text-center">Voice Recognition</h3>
+                <p class="card-text">
+                  This Need to be open in local host otherwise it will not run
+                  properly
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <!--<button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Live preview</button>-->
+                    <a
+                      href="/voice_recong/index.html"
+                      class="btn btn-primary btn-lg me-sm-3"
+                      target="_blank"
+                    >
+                      Live Preview
+                    </a>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary btn-lg"
+                    >
+                      View Code
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="https://imagingedge.sony.net/img/IE_webcam_start.png"
+                class="bd-placeholder-img card-img-top"
+                alt=""
+                width="100%"
+                height="225"
+                srcset=""
+              />
 
-          <p class="card-text">This Need to be open in local host otherwise it will not run properly</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a href="/Webcam_virtual/webcam.html" class="btn btn-primary  btn-lg me-sm-3" target="_blank">
-                  Live Preview
-                </a>
-                <button type="button" class="btn btn-outline-secondary btn-lg ">View Code</button>
+              <div class="card-body">
+                <h3 class="text-center">Virtual Webcam</h3>
+
+                <p class="card-text">
+                  This Need to be open in local host otherwise it will not run
+                  properly
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <div
+                      class="d-grid gap-2 d-sm-flex justify-content-sm-center"
+                    >
+                      <a
+                        href="/Webcam_virtual/webcam.html"
+                        class="btn btn-primary btn-lg me-sm-3"
+                        target="_blank"
+                      >
+                        Live Preview
+                      </a>
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-lg"
+                      >
+                        View Code
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img
+                src="https://www.memozor.com/templates/memoire/images/articles/zoom/simon_official_vintage_mb_box_and_game.jpg"
+                class="bd-placeholder-img card-img-top"
+                alt=""
+                width="100%"
+                height="225"
+                srcset=""
+              />
+
+              <div class="card-body">
+                <h3 class="text-center">Simon Game Using Jquery</h3>
+
+                <p class="card-text">
+                  This is a wider card with This content is a little bit longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <!--<button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Live preview</button>-->
+                    <a
+                      href="/Simon Game/index.html"
+                      class="btn btn-primary btn-lg me-sm-3"
+                      target="_blank"
+                    >
+                      Live Preview
+                    </a>
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary btn-lg"
+                    >
+                      View Code
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="https://www.memozor.com/templates/memoire/images/articles/zoom/simon_official_vintage_mb_box_and_game.jpg"  class="bd-placeholder-img card-img-top" alt="" width="100%" height="225" srcset="">
 
+    <div class="b-example-divider"></div>
 
-        <div class="card-body">
-          <h3 class="text-center">Simon Game Using Jquery</h3>
-
-          <p class="card-text">This is a wider card with  This content is a little bit longer.</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <!--<button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Live preview</button>-->
-              <a href="/Simon Game/index.html" class="btn btn-primary  btn-lg me-sm-3" target="_blank">
-                Live Preview
-              </a>
-              <button type="button" class="btn btn-outline-secondary btn-lg">View Code</button>
-            </div>
+    <div class="container px-4 py-5" id="hanging-icons">
+      <!--<h2 class="pb-2 border-bottom">Hanging icons</h2>-->
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#toggles2"></use>
+            </svg>
+          </div>
+          <div>
+            <h2>News Website</h2>
+            <p>
+              Paragraph of text beneath the heading to explain the heading.
+              We'll add onto it with another sentence and probably just keep
+              going until we run out of words.
+            </p>
+            <a href="/news_website/new_website.html" class="btn btn-primary">
+              Live Preview
+            </a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#cpu-fill"></use>
+            </svg>
+          </div>
+          <div>
+            <h2>Library Websites</h2>
+            <p>
+              Paragraph of text beneath the heading to explain the heading.
+              We'll add onto it with another sentence and probably just keep
+              going until we run out of words.
+            </p>
+            <a
+              href="/college_library/libary_website.html"
+              class="btn btn-primary"
+            >
+              Live Preview
+            </a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#tools"></use>
+            </svg>
+          </div>
+          <div>
+            <h2>Alarm Clock</h2>
+            <p>
+              Paragraph of text beneath the heading to explain the heading.
+              We'll add onto it with another sentence and probably just keep
+              going until we run out of words.
+            </p>
+            <a href="/alarmclock/almarclock.html" class="btn btn-primary">
+              Live Preview
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
-
-<div class="b-example-divider"></div>
-
-  <div class="container px-4 py-5" id="hanging-icons">
-    <!--<h2 class="pb-2 border-bottom">Hanging icons</h2>-->
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-      <div class="col d-flex align-items-start">
-        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-        </div>
-        <div>
-          <h2>News Website</h2>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="/news_website/new_website.html" class="btn btn-primary">
-            Live Preview
+    <div class="b-example-divider"></div>
+    <div class="container px-4 py-5" id="featured-3">
+      <!--<h2 class="pb-2 border-bottom">Columns with icons</h2>-->
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div class="feature-icon bg-primary bg-gradient">
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#collection"></use>
+            </svg>
+          </div>
+          <h2>Binary Calculator</h2>
+          <p>
+            Paragraph of text beneath the heading to explain the heading. We'll
+            add onto it with another sentence and probably just keep going until
+            we run out of words.
+          </p>
+          <a href="/Binary_calculator/calculator.html" class="icon-link">
+            View Details
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
           </a>
         </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
-        </div>
-        <div>
-          <h2>Library Websites</h2>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="/college_library/libary_website.html" class="btn btn-primary">
-            Live Preview
+        <div class="feature col">
+          <div class="feature-icon bg-primary bg-gradient">
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#people-circle"></use>
+            </svg>
+          </div>
+          <h2>Image Styling</h2>
+          <p>
+            Paragraph of text beneath the heading to explain the heading. We'll
+            add onto it with another sentence and probably just keep going until
+            we run out of words.
+          </p>
+          <a href="/image_styling/img_panel.html" class="icon-link">
+            View Detials
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#chevron-right"></use>
+            </svg>
           </a>
         </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
-        </div>
-        <div>
-          <h2>Alarm Clock</h2>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="/alarmclock/almarclock.html" class="btn btn-primary">
-            Live Preview
+        <div class="feature col">
+          <div class="feature-icon bg-primary bg-gradient">
+            <svg class="bi" width="1em" height="1em">
+              <use xlink:href="#toggles2"></use>
+            </svg>
+          </div>
+          <h2>Cv Screener</h2>
+          <p>
+            Paragraph of text beneath the heading to explain the heading. We'll
+            add onto it with another sentence and probably just keep going until
+            we run out of words.
+          </p>
+          <a href="/Cv_screener/cv_screener.html">
+            View Details
+            <!-- <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>-->
           </a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="b-example-divider"></div>
-  <div class="container px-4 py-5" id="featured-3">
-   <!--<h2 class="pb-2 border-bottom">Columns with icons</h2>-->
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-      <div class="feature col">
-        <div class="feature-icon bg-primary bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-        </div>
-        <h2>Binary Calculator</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="/Binary_calculator/calculator.html" class="icon-link">
-          View Details
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-        </a>
-      </div>
-      <div class="feature col">
-        <div class="feature-icon bg-primary bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-        </div>
-        <h2>Image Styling</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="/image_styling/img_panel.html" class="icon-link">
-          View Detials
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-        </a>
-      </div>
-      <div class="feature col">
-        <div class="feature-icon bg-primary bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-        </div>
-        <h2>Cv Screener</h2>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="/Cv_screener/cv_screener.html">
-         View Details
-        <!-- <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>-->
-        </a>
-      </div>
-    </div>
-  </div>
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
